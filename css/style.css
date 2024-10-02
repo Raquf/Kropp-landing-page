@@ -1,0 +1,73 @@
+/* ---------- Global components start ---------- */
+
+@font-face {
+  font-family: "Heebo";
+  src: url("../fonts/Heebo-Light.woff2") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Heebo";
+  src: url("../fonts/Heebo-Bold.woff2") format("woff2");
+  font-display: swap;
+  font-style: bold;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Heebo";
+  src: url("../fonts/Yantramanav-Bold.woff2") format("woff2");
+  font-display: swap;
+  font-style: bold;
+  font-weight: 700;
+}
+
+:root {
+  --border: 1px solid var(var(--color-light));
+  --border-radius: 30px;
+
+  --container-padding-x: 15px;
+  --container-width: 1300px;
+
+  --color-dark: #000000;
+  --color-dark-gray: #404040;
+  --color-light: #ffffff;
+  --color-light-gray: #c4c4c4;
+
+  --font-family-base: "Heebo", sans-serif;
+  --font-family-accent: "Yantramanav", sans-serif;
+
+  --input-height: 54px;
+
+  --transition-duration: 0.2s;
+}
+
+body {
+  background-color: var(--color-dark);
+  color: var(--color-light-gray);
+  font-family: var(--font-family-base);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.container {
+  margin-inline: auto;
+  max-width: calc(var(--container-width)+var(--container-padding-x) * 2);
+  padding-inline: var(--container-padding-x);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* ---------- General components finish ---------- */
+
+/*---------------------------------------------------*/
