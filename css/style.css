@@ -52,10 +52,20 @@ body {
   line-height: 1.75;
 }
 
-.container {
-  margin-inline: auto;
-  max-width: calc(var(--container-width)+var(--container-padding-x) * 2);
-  padding-inline: var(--container-padding-x);
+a {
+  color: var(--color-light);
+}
+
+a:hover {
+  color: var(--color-light-gray);
+}
+
+a,
+button,
+input,
+textarea,
+svg * {
+  transition-duration: var(--transition-duration);
 }
 
 h1,
@@ -68,6 +78,114 @@ h6 {
   text-transform: uppercase;
 }
 
+button {
+  align-items: center;
+  background-color: var(--color-light);
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 12px;
+  font-weight: 700;
+  display: inline-flex;
+  height: 38px;
+  letter-spacing: 1.2px;
+  line-height: 2;
+  padding-inline: 26px;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+button:hover {
+  background-color: var(--color-light-gray);
+}
+
+.container {
+  margin-inline: auto;
+  max-width: calc(var(--container-width)+var(--container-padding-x) * 2);
+  padding-inline: var(--container-padding-x);
+}
+
 /* ---------- General components finish ---------- */
 
 /*---------------------------------------------------*/
+
+/* ---------- Header components start ---------- */
+
+.header {
+  align-items: center;
+  column-gap: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-logo {
+  flex-shrink: 0;
+}
+
+.header-logo-img {
+}
+
+.header-menu {
+}
+
+.header-menu-list {
+  display: flex;
+  column-gap: 50px;
+}
+
+.header-menu-item {
+  list-style-type: none;
+}
+
+.header-menu-link {
+  align-items: center;
+  column-gap: 7px;
+  display: inline-flex;
+  font-size: 12px;
+  font-weight: 700;
+  height: 90px;
+  letter-spacing: 1.2px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.header-menu-link.is-current::after {
+  background-color: currentColor;
+  border-radius: 50%;
+  content: "";
+  height: 5px;
+  width: 5px;
+}
+
+.header-actions {
+  column-gap: 40px;
+  display: flex;
+}
+
+.header-burger-button {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 4px;
+  width: 40px;
+  aspect-ratio: 1;
+  padding-left: 8px;
+  color: var(--color-light);
+  background-color: transparent;
+  border: var(--border);
+  border-radius: 50%;
+}
+
+.header-burger-button:hover {
+  border-color: currentColor;
+  color: var(--color-light-gray);
+}
+
+.header-burger-button-line {
+  background-color: currentColor;
+  box-shadow: 16px 0 0 currentColor;
+  height: 1px;
+  width: 6px;
+}
+
+/* ---------- Header components finish ---------- */
