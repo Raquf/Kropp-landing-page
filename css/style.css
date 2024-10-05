@@ -218,29 +218,69 @@ h6 {
   display: flex;
   flex-direction: column;
   justify-content: end;
-  min-height: 985px;
+  min-height: calc(100vh -var(--header-height));
   padding: 36px 70px;
 }
 
 .banner-body {
+  text-transform: uppercase;
 }
 
 .banner-info {
+  align-items: end;
+  display: flex;
+  font-size: clamp(16px, 1.56vw, 30px);
+  font-weight: 700;
+  line-height: 1.27;
+}
+
+.banner-info::before {
+  aspect-ratio: 1;
+  background: url("../images/icons/bold-arrow-down-right.svg") center/contain
+    no-repeat;
+  content: "";
+  margin-right: 30px;
+  width: clamp(60px, 10.1vw, 194px);
 }
 
 .banner-title {
-}
-
-.banner-pagination {
+  font-size: min(18.75vw, 360px);
+  line-height: 1;
 }
 
 .banner-pagination-list {
+  display: flex;
+  justify-content: center;
 }
 
 .banner-pagination-item {
+  display: flex;
 }
 
 .banner-pagination-button {
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  display: inline-flex;
+  justify-content: center;
+  padding: 7px;
+}
+
+.banner-pagination-button::after {
+  aspect-ratio: 1;
+  border: var(--border);
+  border-radius: 50%;
+  content: "";
+  transition-duration: var(--transition-duration);
+  width: 10px;
+}
+
+.banner-pagination-button.is-current::after {
+  background-color: var(--color-light);
+}
+
+.banner-pagination-button:not(.is-current):hover::after {
+  border-color: var(--color-light-gray);
 }
 
 /* ---------- Banner section components finish ---------- */
@@ -271,6 +311,10 @@ h6 {
   .header-menu-link {
     height: 50px;
   }
+
+  .banner {
+    row-gap: 10px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -293,6 +337,14 @@ h6 {
 
   .header-actions {
     column-gap: 15px;
+  }
+
+  .banner-info {
+    margin-bottom: 5px;
+  }
+
+  .banner-info::before {
+    margin-right: 10px;
   }
 }
 
