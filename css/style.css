@@ -193,8 +193,8 @@ h6 {
 }
 
 .header-burger-button:hover {
-  color: var(--color-light-gray);
   border-color: currentColor;
+  color: var(--color-light-gray);
 }
 
 .header-burger-button-line {
@@ -328,7 +328,6 @@ h6 {
 
   .header-menu-list {
     column-gap: 24px;
-    list-style-type: none;
   }
 
   .header-menu-link {
