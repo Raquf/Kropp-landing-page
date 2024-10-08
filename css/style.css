@@ -159,6 +159,16 @@ h6 {
   z-index: -1;
 }
 
+.backdrop-title.centered::after {
+  left: 50%;
+  top: -0.55em;
+  translate: -50% 0;
+}
+
+.title-big {
+  font-size: clamp(24px, 3.12vw, 60px);
+}
+
 .title-medium {
   font-size: clamp(20px, 2.08em, 40px);
   line-height: 1.3;
@@ -423,6 +433,125 @@ h6 {
 }
 
 /* ---------- Training types section components finish ---------- */
+
+/* ---------- Join us section components start ---------- */
+
+.join-us-video-wrapper {
+  align-items: center;
+  display: flex;
+  background: url(../images/section/join-us/join-us-bg.jpg) center/cover
+    no-repeat var(--color-dark-alternate);
+  justify-content: center;
+  padding: 150px 30px;
+  position: relative;
+}
+
+.video {
+}
+
+.join-us-video-play-button {
+  align-items: center;
+  aspect-ratio: 1;
+  background-color: transparent;
+  border: var(--border);
+  border-radius: 50%;
+  color: var(--color-light);
+  column-gap: 4px;
+  display: inline-flex;
+  font-size: 14px;
+  font-weight: 700;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  text-transform: uppercase;
+  top: 50%;
+  translate: -50% -50%;
+  width: 200px;
+}
+
+.join-us-video-play-button::after {
+  aspect-ratio: 1;
+  background: url("../images/icons/arrow-up-right.svg") center/contain no-repeat;
+  content: "";
+  transition-duration: var(--transition-duration);
+  width: 26px;
+}
+
+.join-us-video-play-button:hover {
+  background-color: var(--color-dark-gray);
+  color: var(--color-dark);
+}
+
+.join-us-video-play-button:hover::after {
+  filter: invert(1);
+}
+
+.join-us-body {
+  padding-bottom: 150px;
+}
+
+.join-us-title {
+  font-size: clamp(64px, 9.37vw, 180px);
+  line-height: 1;
+  margin-top: -0.4em;
+  position: relative;
+  text-align: center;
+}
+
+.join-us-title::after {
+  aspect-ratio: 1;
+  background: url(../images/icons/bold-arrow-down-right.svg) center/contain
+    no-repeat;
+  content: "";
+  display: inline-block;
+  height: 0.7em;
+  margin-left: 0.14em;
+  scale: 1 -1;
+}
+
+.join-us:not(:last-child) {
+  margin-bottom: 130px;
+}
+
+.join-us-form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 7px;
+}
+
+.join-us-form-header {
+}
+
+.join-us-form-title {
+}
+
+.backdrop-title {
+}
+
+.join-us-form-subtitle {
+  color: var(--color-light);
+  font-size: 20px;
+  line-height: 1.65;
+  text-transform: uppercase;
+}
+
+.join-us-form-body {
+}
+
+.visually-hidden {
+}
+
+.join-us-form-input {
+}
+
+.input {
+}
+
+.join-us-form-button {
+}
+
+/* ---------- Join us section components finish ---------- */
 
 /* ---------- Main components finish ---------- */
 
