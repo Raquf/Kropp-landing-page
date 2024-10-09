@@ -177,6 +177,7 @@ h6 {
 .button.transparent {
   background-color: transparent;
   border: var(--border);
+  color: var(--color-light);
   height: var(--input-height);
   padding-left: 31px;
   padding-right: 88px;
@@ -197,6 +198,30 @@ h6 {
 .button.transparent:hover {
   color: var(--color-dark);
   background-color: var(--color-light-gray);
+}
+
+.input {
+  background-color: transparent;
+  border: 1px solid var(--color-light-gray);
+  border-radius: var(--border-radius);
+  color: var(--color-light);
+  height: var(--input-height);
+  padding-inline: 25px;
+  width: 100%;
+}
+
+.input::placeholder {
+  color: var(--color-light-gray);
+}
+
+.input:hover {
+  color: var(--color-light);
+}
+
+.input:focus {
+  background-color: var(--color-light-gray);
+  color: var(--color-dark);
+  outline: none;
 }
 
 /* ---------- General components finish ---------- */
@@ -425,9 +450,6 @@ h6 {
   --trainingTypesItemBgIconSize: 80px;
 }
 
-.training-types-image {
-}
-
 .training-types-item-title {
   font-size: 16px;
 }
@@ -446,7 +468,10 @@ h6 {
   position: relative;
 }
 
-.video {
+.join-us-video {
+  height: auto;
+  max-width: 960px;
+  width: 100%;
 }
 
 .join-us-video-play-button {
@@ -513,23 +538,19 @@ h6 {
   margin-bottom: 130px;
 }
 
-.join-us-form {
+.join-us-form-header {
   align-items: center;
   display: flex;
   flex-direction: column;
   row-gap: 7px;
 }
 
-.join-us-form-header {
-}
-
-.join-us-form-title {
-}
-
-.backdrop-title {
+.join-us-form-header:not(:last-child) {
+  margin-bottom: 52px;
 }
 
 .join-us-form-subtitle {
+  align-items: center;
   color: var(--color-light);
   font-size: 20px;
   line-height: 1.65;
@@ -537,15 +558,13 @@ h6 {
 }
 
 .join-us-form-body {
-}
-
-.visually-hidden {
+  column-gap: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 .join-us-form-input {
-}
-
-.input {
+  max-width: 400px;
 }
 
 .join-us-form-button {
@@ -604,6 +623,14 @@ h6 {
     height: auto;
     margin-block: 0;
     max-width: 30%;
+  }
+
+  .join-us-body {
+    padding-bottom: 80px;
+  }
+
+  .join-us-title:not(:last-child) {
+    margin-bottom: 80px;
   }
 }
 
@@ -666,6 +693,24 @@ h6 {
 
   .training-types-image {
     max-width: 120px;
+  }
+
+  .join-us-video-play-button {
+    width: 140px;
+  }
+
+  .join-us-title:not(:last-child) {
+    margin-bottom: 40px;
+  }
+
+  .join-us-form-subtitle {
+    font-size: 16px;
+  }
+
+  .join-us-form-body {
+    align-items: center;
+    flex-direction: column;
+    row-gap: 20px;
   }
 }
 
