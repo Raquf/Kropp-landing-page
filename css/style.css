@@ -612,7 +612,37 @@ h6 {
 /* ---------- Location section components finish ---------- */
 
 /* ---------- Family section components start ---------- */
+.family {
+  background-color: var(--color-dark-alternate);
+}
 
+.family-header {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding-top: 132px;
+  padding-bottom: 62px;
+  row-gap: 7px;
+  text-align: center;
+}
+
+.family-title {
+}
+
+.family-description {
+}
+
+.family-body {
+  column-gap: 26px;
+  display: flex;
+  justify-content: center;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+
+.family-image {
+  scroll-snap-align: start;
+}
 /* ---------- Family section components finish ---------- */
 
 /* ---------- Main components finish ---------- */
@@ -771,6 +801,15 @@ h6 {
 
   .location-description:not(:last-child) {
     margin-bottom: 20px;
+  }
+
+  .family-header {
+    padding-bottom: 50px;
+    padding-top: 80px;
+  }
+
+  .family-body {
+    column-gap: 12px;
   }
 
   .family-image {
