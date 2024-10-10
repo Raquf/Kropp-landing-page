@@ -458,6 +458,10 @@ h6 {
 
 /* ---------- Join us section components start ---------- */
 
+.join-us {
+  background-color: var(--color-dark-alternate);
+}
+
 .join-us-video-wrapper {
   align-items: center;
   display: flex;
@@ -567,10 +571,10 @@ h6 {
   max-width: 400px;
 }
 
-.join-us-form-button {
-}
-
 /* ---------- Join us section components finish ---------- */
+
+/* ---------- Location section components start ---------- */
+/* ---------- Location section components finish ---------- */
 
 /* ---------- Main components finish ---------- */
 
